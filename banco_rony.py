@@ -7,7 +7,8 @@ while True:
     print('1 - Depositar')
     print('2 - Sacar')
     print('3 - Fazer Pix')
-    print('4 - Sair')
+    print('4 - Consultar saldo')
+    print('5 - Sair')
 
     while True:
         try:
@@ -15,7 +16,7 @@ while True:
         except ValueError:
             print('Digite um número válido!')
             continue
-        if 0 < opcao > 4:
+        if opcao <= 0 or opcao > 4:
             print('Opção inválida!')
             continue
         break
@@ -90,6 +91,9 @@ while True:
             break
         continue
     if opcao == 4:
+        print(f'Seu saldo é RS{saldo}')
+        continue
+    if opcao == 5:
         print('Saindo...')
         print('Programa encerrado')
     break
