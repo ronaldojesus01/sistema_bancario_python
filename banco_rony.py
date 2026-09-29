@@ -36,6 +36,7 @@ while True:
             else:
                 print('Valor depositado com sucesso')
                 saldo += dep
+                saldo = round(saldo, 2)
                 print(f'Saldo atual: {saldo}')
             break
         continue
@@ -57,6 +58,7 @@ while True:
             else:
                 print('Saque realizado com sucesso')
                 saldo -= sacar
+                saldo = round(saldo, 2)
                 print(f'Saldo atual: {saldo}')
             break
         continue
