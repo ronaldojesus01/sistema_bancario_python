@@ -16,7 +16,7 @@ while True:
         except ValueError:
             print('Digite um número válido!')
             continue
-        if opcao <= 0 or opcao > 4:
+        if opcao <= 0 or opcao > 5:
             print('Opção inválida!')
             continue
         break
@@ -30,7 +30,7 @@ while True:
             except ValueError:
                 print('Valor inválido!')
                 continue
-            if dep <= 0:
+            if dep <= 0 or dep > 1000000000:
                 print('Valor inválido!')
                 continue
             else:
