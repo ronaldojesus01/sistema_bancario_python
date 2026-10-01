@@ -31,13 +31,13 @@ while True:
                 print('Valor inválido!')
                 continue
             if dep <= 0 or dep > 1000000000:
-                print('Valor inválido!')
+                print('O depósito não pode ser menor que zero ou igual a zero e nem maior que 1 bilhão!')
                 continue
             else:
-                print('Valor depositado com sucesso')
+                print(f'Parabéns, você depositou RS{dep}')
                 saldo += dep
                 saldo = round(saldo, 2)
-                print(f'Saldo atual: {saldo}')
+                print(f'Seu saldo atual é: RS{saldo}')
             break
         continue
     elif opcao == 2:
@@ -50,16 +50,16 @@ while True:
                 print('Valor inválido!')
                 continue
             if sacar <= 0:
-                print('Valor inválido!')
+                print('O saque não pose ser menor ou igual a zero!')
                 continue
             elif sacar > saldo:
-                print('Saldo insuficiente')
+                print('Seu saldo é insuficiente')
                 continue
             else:
-                print('Saque realizado com sucesso')
+                print(f'Seu saque de RS{sacar}, foi realizado com sucesso')
                 saldo -= sacar
                 saldo = round(saldo, 2)
-                print(f'Saldo atual: {saldo}')
+                print(f'Sei saldo atual é: RS{saldo}')
             break
         continue
     elif opcao == 3:
@@ -69,12 +69,11 @@ while True:
             try:
                 chave_pix = input('Chave pix: ')
             except ValueError:
-                print('Valor inválido')
+                print('Chave inválido')
                 continue
-            break
 
             if len(chave_pix) < 10:
-                print('Pix inválido')
+                print('Chave inválida')
                 continue
 
         while True:
@@ -83,13 +82,13 @@ while True:
             except ValueError:
                 print('Valor inválido')
                 continue
-            if 0 >= valor_pix > 1000000000:
-                print('Valor inválido')
+            if valor_pix <+ 0 or valor_pix > 1000000000:
+                print('Não é possível fazer o pix menor ou igual a zero ou maior que 1 bilhão')
                 continue
             else:
-                print('Pix realizado com sucesso')
+                print(f'Pix de RS{valor_pix} foi realizado com sucesso')
                 saldo -= valor_pix
-                print(f'Saldo atual: {saldo}')
+                print(f'Seu saldo atual é: RS{saldo}')
             break
         continue
     if opcao == 4:
